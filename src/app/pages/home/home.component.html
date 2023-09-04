@@ -1,0 +1,55 @@
+<div class="banner">
+<div class="content">
+    <h1 class="mb-5">fresh cooked food <br> at your door.</h1>
+    <a href="menu">ORDER NOW <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+    </a>
+</div> 
+</div>
+<!-- step -->
+<div class="container mt-5 mb-5">
+    <h1 class="text-center">how to get <span class="highlight">fresh food.</span>
+    </h1>
+    <div class="row mt-5">
+        <!-- one -->
+        <div class="col-lg-4 mt-2">
+            <div class="step-box">
+                <h1>1</h1>
+                <p>select food</p>
+            </div>
+        </div>
+        <!-- two -->
+        <div class="col-lg-4 mt-2">
+            <div class="step-box">
+                <h1>2</h1>
+                <p>fill the details</p>
+            </div>
+        </div>
+        <!-- three -->
+        <div class="col-lg-4 mt-2">
+            <div class="step-box">
+                <h1>3</h1>
+                 <p>your order delived in minute</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- foodbox -->
+<div class="container mt-4 mb-4">
+    <h1 class="text-center">customer <span class="highlight">favorite food.</span></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3" *ngFor="let fd of fooddata; index as i">
+            <div class="foodbox" *ngIf="i <= 3">
+                <img src="{{fd.foodimg}}" alt="food-image">
+                <h1>{{fd.foodname}}</h1>
+                <p>{{fd.foodprice | currency}}</p>
+            </div>
+        </div>
+    </div>
+    <a class="viewmorebtn" routerLink="menu">view more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                                        </svg>
+    </a>
+</div>
